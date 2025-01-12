@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spruces - Subscribe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Basic Branding from your screenshot: dark green background, white text */
+    :root {
+      --bg-color: #183630;    /* Dark green from Spruces brand */
+      --text-color: #ffffff;  /* White text */
+      --accent-color: #2f4d3f;/* A slightly different green if needed */
+      --heading-font: Georgia, serif;
+      --body-font: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--body-font);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+    .intro p {
+      margin-bottom: 8px;
+    }
+
+    /* Pricing Cards Container */
+    .plans-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .plan-card {
+      background-color: #2a4a3e;
+      border-radius: 6px;
+      padding: 20px;
+      width: 260px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .plan-title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .sub-info {
+      font-size: 14px;
+      margin-bottom: 15px;
+      color: #c7e0d4; /* slightly muted text for sub info */
+    }
+
+    .features-list {
+      text-align: left;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    .features-list li {
+      margin-bottom: 5px;
+    }
+
+    .plan-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .plan-button:hover {
+      background-color: #bcd3c5; /* Lighter variant */
+      color: #183630;
+    }
+
+    /* Mark the “Free” plan as something user is on if needed */
+    .current-badge {
+      background-color: #ffc107;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    /* Big Plan Comparison Table */
+    .comparison-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #2a4a3e;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 40px;
+    }
+
+    .comparison-section h2 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    table.comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: var(--text-color);
+      background-color: #2f4d3f;
+    }
+
+    table.comparison-table thead th {
+      background-color: #2f4d3f;
+      font-weight: 600;
+      text-align: center;
+      padding: 12px;
+      border-bottom: 1px solid #4d665d;
+    }
+
+    table.comparison-table th,
+    table.comparison-table td {
+      border-right: 1px solid #4d665d;
+      padding: 8px 10px;
+    }
+    table.comparison-table th:last-child,
+    table.comparison-table td:last-child {
+      border-right: none;
+    }
+
+    table.comparison-table tbody tr {
+      border-bottom: 1px solid #4d665d;
+    }
+
+    table.comparison-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .plan-col {
+      width: 140px;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    .price-col {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* Go Back Button */
+    .back-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-button {
+      background-color: #ffffff;
+      color: #183630;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+    .back-button:hover {
+      background-color: #bcd3c5;
+      color: #183630;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .plans-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .plan-card {
+        width: 100%;
+        max-width: 350px;
+      }
+      table.comparison-table thead th,
+      table.comparison-table td {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Spruces Subscription Plans</h1>
+
+<div class="intro">
+  <p>Whether you're building a personal website or managing client projects, Formspree has an affordable plan to meet your needs.</p>
+  <p>Monthly billing | Yearly billing</p>
+</div>
+
+<!-- Pricing Cards -->
+<div class="plans-container">
+
+  <!-- FREE plan -->
+  <div class="plan-card">
+    <div>
+      <div class="plan-title">Free Forever</div>
+      <div class="price">$0<span style="font-size:14px;">/mo</span></div>
+      <p class="sub-info">Use Formspree for testing and development with unlimited projects and forms, limited to 50 submissions/mo.</p>
+      <ul class="features-list">
+        <li>For testing and dev</li>
+        <li>50 submissions/month</li>
+      </ul>
+    </div>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Select</a>
+  </div>
+
+  <!-- PERSONAL plan -->
+  <div class="plan-card">
+    <div>
+      <div class="plan-title">Personal</div>
+      <div class="price">$10<span style="font-size:14px;">/mo</span></div>
+      <p class="sub-info">200 Submissions, 1 Team Member. Perfect for personal or portfolio sites.</p>
+      <ul class="features-list">
+        <li>Basic Plugins</li>
+        <li>Export</li>
+        <li>Spam Filtering</li>
+        <li>Custom Redirect</li>
+      </ul>
+    </div>
+    <!-- Example: This is the "current" plan if you want to show a badge
+         <span class="current-badge">Current</span> 
+    -->
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Current</a>
+  </div>
+
+  <!-- PROFESSIONAL plan -->
+  <div class="plan-card">
+    <div>
+      <div class="plan-title">Professional</div>
+      <div class="price">$20<span style="font-size:14px;">/mo</span></div>
+      <p class="sub-info">2K Submissions, 2 Team Members. Great for freelancers & startups.</p>
+      <ul class="features-list">
+        <li>All Personal plus:</li>
+        <li>Premium Plugins</li>
+        <li>Autoresponses</li>
+        <li>Advanced Spam Control</li>
+        <li>API Access</li>
+      </ul>
+    </div>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Select</a>
+  </div>
+
+  <!-- BUSINESS plan -->
+  <div class="plan-card">
+    <div>
+      <div class="plan-title">Business</div>
+      <div class="price">$60<span style="font-size:14px;">/mo</span></div>
+      <p class="sub-info">20K Submissions. Ideal for organizations & agencies.</p>
+      <ul class="features-list">
+        <li>All Professional plus:</li>
+        <li>Custom Templates</li>
+        <li>Custom Domains</li>
+        <li>Rules Engine</li>
+        <li>Priority Support</li>
+      </ul>
+    </div>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Select</a>
+  </div>
+
+  <!-- CUSTOM plan -->
+  <div class="plan-card">
+    <div>
+      <div class="plan-title">Custom</div>
+      <div class="price">Custom</div>
+      <p class="sub-info">For high volume campaigns, contact us.</p>
+      <ul class="features-list">
+        <li>All Business plus:</li>
+        <li>SLA</li>
+        <li>Full Service Onboarding</li>
+        <li>Phone Support</li>
+      </ul>
+    </div>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Contact Sales</a>
+  </div>
+
+</div>
+
+<!-- Plan Comparison Section -->
+<div class="comparison-section">
+  <h2>Plan Comparison</h2>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Feature by Plans</th>
+        <th class="plan-col">Free</th>
+        <th class="plan-col">Personal</th>
+        <th class="plan-col">Professional</th>
+        <th class="plan-col">Business</th>
+        <th class="plan-col">Custom</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="price-col">Pricing</td>
+        <td>$0 /mo</td>
+        <td>$10 /mo</td>
+        <td>$20 /mo</td>
+        <td>$60 /mo</td>
+        <td>Custom</td>
+      </tr>
+      <tr>
+        <td>Checkout Buttons</td>
+        <td>Select</td>
+        <td>Current</td>
+        <td>Select</td>
+        <td>Select</td>
+        <td>Contact Sales</td>
+      </tr>
+      <tr>
+        <td>Forms</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+      </tr>
+      <tr>
+        <td>Projects</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+      </tr>
+      <tr>
+        <td>Team Members</td>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>∞</td>
+        <td>∞</td>
+      </tr>
+      <tr>
+        <td>Monthly Submissions</td>
+        <td>50</td>
+        <td>200</td>
+        <td>2,000</td>
+        <td>20,000</td>
+        <td>∞</td>
+      </tr>
+      <tr>
+        <td>Submission Archive</td>
+        <td>30 Days</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+      </tr>
+      <tr>
+        <td>Linked Emails</td>
+        <td>2</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+        <td>∞</td>
+      </tr>
+      <tr>
+        <td>File Uploads</td>
+        <td>-</td>
+        <td>1 GB</td>
+        <td>5 GB</td>
+        <td>10 GB</td>
+        <td>∞</td>
+      </tr>
+      <tr>
+        <td>Submission Export</td>
+        <td></td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Search Submissions</td>
+        <td></td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Basic Spam Filtering</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Advanced Spam Control</td>
+        <td></td>
+        <td></td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Priority Support</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>SLA, Full Onboarding, Phone Support</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Go Back Button -->
+<div class="back-container">
+  <a class="back-button" href="index.html">Go Back</a>
+</div>
+
+</body>
+</html>
