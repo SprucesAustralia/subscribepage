@@ -41,12 +41,6 @@
       margin-bottom: 20px;
     }
 
-    h2 {
-      text-align: center;
-      font-size: 22px;
-      margin: 10px 0;
-    }
-
     .intro {
       max-width: 800px;
       margin: 0 auto;
@@ -157,6 +151,7 @@
     table.comparison-table td {
       border-right: 1px solid #4d665d;
       padding: 8px 10px;
+      vertical-align: top;
     }
 
     table.comparison-table th:last-child,
@@ -181,6 +176,15 @@
     .price-col {
       font-size: 16px;
       font-weight: bold;
+    }
+
+    /* Lighter, smaller annotation for benefits/ROI */
+    .benefit-annotation {
+      display: block;
+      font-size: 12px;
+      font-style: italic;
+      color: #d0d6d3; /* or #c7e0d4, a lighter shade for annotation */
+      margin-top: 2px;
     }
 
     .back-container {
@@ -225,14 +229,10 @@
 
 <div class="intro">
   <p>
-    Transform any worker, task, or service into a “Smart Activity” for your peace of mind,
-    better safety, consistent quality, and more value for each dollar you spend.
+    Transform any worker, task, or service into a “Smart Activity” for your peace of mind, better safety, consistent quality, and more value for each dollar you spend.
   </p>
   <p>
     Ensure everyone follows best practices now!
-  </p>
-  <p>
-    Go beyond the bare-minimum expectation from your team & elevate your team with our subscription plans below:
   </p>
 </div>
 
@@ -280,7 +280,7 @@
       <p class="sub-info">Unlimited checklists, advanced features, best for multi-site businesses.</p>
       <ul class="features-list">
         <li>Unlimited checklists</li>
-        <li>2 changes/month to tasks</li>
+        <li>2 changes/month</li>
         <li>2,000 submissions / 1,500 images monthly</li>
         <li>Priority support (<24 hrs)</li>
         <li>Audit & Revision History</li>
@@ -306,9 +306,15 @@
     <!-- Direct to spruces.co/contact-us/ -->
     <a class="plan-button" href="https://spruces.co/contact-us/" target="_blank">Contact Us</a>
   </div>
+
 </div>
 
-<!-- Plan Comparison -->
+<!-- Insert text before the comparison section as requested -->
+<h2 style="text-align:center; margin-bottom:20px;">
+  Go beyond the bare-minimum expectation from your team &amp; elevate your team with our subscription plans below:
+</h2>
+
+<!-- Plan Comparison Section -->
 <div class="comparison-section">
   <h2>Plan Comparison</h2>
   <table class="comparison-table">
@@ -330,63 +336,81 @@
         <td>Contact</td>
       </tr>
       <tr>
-        <td>Checklists</td>
+        <td>Checklists 
+          <span class="benefit-annotation">make sure your team doesn’t miss any tasks – boost quality & organization</span>
+        </td>
         <td>1 Basic</td>
         <td>Up to 5</td>
         <td>Unlimited</td>
         <td>Unlimited</td>
       </tr>
       <tr>
-        <td>Monthly Submissions</td>
+        <td>Monthly Submissions
+          <span class="benefit-annotation">track consistent activity, ensuring tasks get done each time</span>
+        </td>
         <td>50</td>
         <td>200</td>
         <td>2,000</td>
         <td>Custom</td>
       </tr>
       <tr>
-        <td>Monthly Images</td>
+        <td>Monthly Images
+          <span class="benefit-annotation">photo proof, transparency, & accountability for every job</span>
+        </td>
         <td>No images</td>
         <td>300</td>
         <td>1,500</td>
         <td>Custom</td>
       </tr>
       <tr>
-        <td>Checklist Changes</td>
+        <td>Checklist Changes 
+          <span class="benefit-annotation">adapt quickly to new tasks or requirements for ongoing improvement</span>
+        </td>
         <td>None</td>
         <td>1 / month</td>
         <td>2 / month</td>
         <td>Unlimited</td>
       </tr>
       <tr>
-        <td>Support</td>
+        <td>Support 
+          <span class="benefit-annotation">get help fast, keep operations smooth with timely responses</span>
+        </td>
         <td>None</td>
         <td>Email (24–72 hrs)</td>
         <td>Priority (<24 hrs)</td>
         <td>Phone/Email</td>
       </tr>
       <tr>
-        <td>Audit & Revision History</td>
+        <td>Audit & Revision History 
+          <span class="benefit-annotation">spot trends, correct mistakes, and maintain historical records</span>
+        </td>
         <td>No</td>
         <td>No</td>
         <td>Yes</td>
         <td>Yes</td>
       </tr>
       <tr>
-        <td>Analytics</td>
+        <td>Analytics 
+          <span class="benefit-annotation">insights on performance & efficiency to maximize ROI</span>
+        </td>
         <td>No</td>
         <td>No</td>
         <td>Yes</td>
         <td>Yes</td>
       </tr>
       <tr>
-        <td>Phone Support</td>
+        <td>Phone Support 
+          <span class="benefit-annotation">live assistance for urgent issues or advanced setup</span>
+        </td>
         <td>No</td>
         <td>No</td>
         <td>No</td>
         <td>Yes</td>
       </tr>
       <tr>
-        <td>Contact Info</td>
+        <td>Contact Info 
+          <span class="benefit-annotation">quick action on whichever plan suits you best</span>
+        </td>
         <td><a href="https://spruces.co/" target="_blank" style="color:#fff;">Stay Free</a></td>
         <td><a href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank" style="color:#fff;">Upgrade</a></td>
         <td><a href="https://spruces.typeform.com/to/QAvFqVcJ" target="_blank" style="color:#fff;">Go Premium</a></td>
@@ -398,6 +422,7 @@
 
 <!-- Go Back Link -->
 <div style="text-align:center;">
+  <!-- The “Go Back” also going to spruces.co -->
   <a class="back-button" href="https://spruces.co/" target="_blank">Go Back</a>
 </div>
 
