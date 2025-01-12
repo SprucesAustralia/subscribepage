@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Spruces - Subscribe</title>
+  <meta charset="UTF-8" />
+  <title>Your Ai-checklist Upgrade Plans</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    /* Basic Branding from your screenshot: dark green background, white text */
+    /* Branding Colors: Dark forest green background, white text, any accent if desired */
     :root {
-      --bg-color: #183630;    /* Dark green from Spruces brand */
-      --text-color: #ffffff;  /* White text */
-      --accent-color: #2f4d3f;/* A slightly different green if needed */
+      --bg-color: #183630;   /* Dark forest green */
+      --text-color: #ffffff; /* White */
+      --accent-color: #2f4d3f; /* Subtle accent green if needed */
       --heading-font: Georgia, serif;
       --body-font: "Segoe UI", Tahoma, sans-serif;
     }
@@ -21,9 +22,9 @@
     }
 
     body {
-      font-family: var(--body-font);
       background-color: var(--bg-color);
       color: var(--text-color);
+      font-family: var(--body-font);
       line-height: 1.5;
       padding: 20px;
     }
@@ -41,21 +42,24 @@
     }
 
     h2 {
-      font-size: 24px;
       text-align: center;
-      margin: 20px 0;
+      font-size: 22px;
+      margin: 10px 0;
     }
 
     .intro {
       max-width: 800px;
-      margin: 0 auto 30px;
+      margin: 0 auto;
       text-align: center;
-    }
-    .intro p {
-      margin-bottom: 8px;
+      margin-bottom: 30px;
     }
 
-    /* Pricing Cards Container */
+    .intro p {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    /* Plan Container */
     .plans-container {
       display: flex;
       flex-wrap: wrap;
@@ -69,7 +73,7 @@
       background-color: #2a4a3e;
       border-radius: 6px;
       padding: 20px;
-      width: 260px;
+      width: 280px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -79,6 +83,7 @@
     .plan-title {
       font-size: 20px;
       margin-bottom: 8px;
+      font-weight: bold;
     }
 
     .price {
@@ -98,8 +103,9 @@
       margin-bottom: 15px;
       line-height: 1.4;
     }
+
     .features-list li {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .plan-button {
@@ -113,21 +119,11 @@
       font-weight: bold;
     }
     .plan-button:hover {
-      background-color: #bcd3c5; /* Lighter variant */
+      background-color: #bcd3c5;
       color: #183630;
     }
 
-    /* Mark the “Free” plan as something user is on if needed */
-    .current-badge {
-      background-color: #ffc107;
-      color: #000;
-      padding: 4px 8px;
-      border-radius: 3px;
-      font-size: 12px;
-      margin-left: 6px;
-    }
-
-    /* Big Plan Comparison Table */
+    /* Plan Comparison Section */
     .comparison-section {
       max-width: 1200px;
       margin: 0 auto;
@@ -162,6 +158,7 @@
       border-right: 1px solid #4d665d;
       padding: 8px 10px;
     }
+
     table.comparison-table th:last-child,
     table.comparison-table td:last-child {
       border-right: none;
@@ -176,7 +173,7 @@
     }
 
     .plan-col {
-      width: 140px;
+      width: 120px;
       text-align: center;
       font-weight: normal;
     }
@@ -186,11 +183,11 @@
       font-weight: bold;
     }
 
-    /* Go Back Button */
     .back-container {
       text-align: center;
       margin-top: 30px;
     }
+
     .back-button {
       background-color: #ffffff;
       color: #183630;
@@ -203,7 +200,6 @@
       color: #183630;
     }
 
-    /* Responsive */
     @media (max-width: 800px) {
       .plans-container {
         flex-direction: column;
@@ -217,102 +213,91 @@
       table.comparison-table td {
         font-size: 13px;
       }
+      .plan-col {
+        width: auto;
+      }
     }
   </style>
 </head>
 <body>
 
-<h1>Spruces Subscription Plans</h1>
+<h1>Your Ai-checklist Upgrade Plans</h1>
 
 <div class="intro">
-  <p>Whether you're building a personal website or managing client projects, Formspree has an affordable plan to meet your needs.</p>
-  <p>Monthly billing | Yearly billing</p>
+  <p>
+    Transform any worker, task, or service into a “Smart Activity” that delivers peace of mind, better safety, consistent quality, and more value for each dollar spent. Our AI-driven checklists are here to help you manage cleaning crews, plumbing jobs, or any kind of on-site work, ensuring everyone follows best practices.
+  </p>
+  <p>
+    Ready to go beyond the basics? Explore our subscription plans below and see how Your Ai-checklist can elevate your operations.
+  </p>
 </div>
 
-<!-- Pricing Cards -->
+<!-- Plans Container -->
 <div class="plans-container">
 
-  <!-- FREE plan -->
+  <!-- FREE PLAN -->
   <div class="plan-card">
     <div>
-      <div class="plan-title">Free Forever</div>
+      <div class="plan-title">Free (Essentials)</div>
       <div class="price">$0<span style="font-size:14px;">/mo</span></div>
-      <p class="sub-info">Use Formspree for testing and development with unlimited projects and forms, limited to 50 submissions/mo.</p>
+      <p class="sub-info">Limited to 50 submissions per month, no photo uploads, 1 basic checklist</p>
       <ul class="features-list">
-        <li>For testing and dev</li>
-        <li>50 submissions/month</li>
+        <li>1 Basic Checklist</li>
+        <li>No photo uploads</li>
+        <li>No custom changes</li>
       </ul>
     </div>
-    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Select</a>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Stay on Free Plan</a>
   </div>
 
-  <!-- PERSONAL plan -->
+  <!-- PERSONAL PLAN -->
   <div class="plan-card">
     <div>
       <div class="plan-title">Personal</div>
-      <div class="price">$10<span style="font-size:14px;">/mo</span></div>
-      <p class="sub-info">200 Submissions, 1 Team Member. Perfect for personal or portfolio sites.</p>
+      <div class="price">$15<span style="font-size:14px;">/mo</span></div>
+      <p class="sub-info">For small teams or single-site operations needing basic photo verification</p>
       <ul class="features-list">
-        <li>Basic Plugins</li>
-        <li>Export</li>
-        <li>Spam Filtering</li>
-        <li>Custom Redirect</li>
+        <li>Up to 5 checklists</li>
+        <li>1 checklist change per month</li>
+        <li>200 submissions / 300 images monthly</li>
+        <li>Email support (24–72 hrs response)</li>
       </ul>
     </div>
-    <!-- Example: This is the "current" plan if you want to show a badge
-         <span class="current-badge">Current</span> 
-    -->
-    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Current</a>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Upgrade to Standard</a>
   </div>
 
-  <!-- PROFESSIONAL plan -->
+  <!-- PROFESSIONAL PLAN -->
   <div class="plan-card">
     <div>
       <div class="plan-title">Professional</div>
-      <div class="price">$20<span style="font-size:14px;">/mo</span></div>
-      <p class="sub-info">2K Submissions, 2 Team Members. Great for freelancers & startups.</p>
+      <div class="price">$25<span style="font-size:14px;">/mo</span></div>
+      <p class="sub-info">For multi-location businesses seeking deeper insights & advanced controls</p>
       <ul class="features-list">
-        <li>All Personal plus:</li>
-        <li>Premium Plugins</li>
-        <li>Autoresponses</li>
-        <li>Advanced Spam Control</li>
-        <li>API Access</li>
+        <li>Unlimited checklists</li>
+        <li>2 changes/month to tasks & checklists</li>
+        <li>2,000 submissions / 1,500 images monthly</li>
+        <li>Priority support (<24 hrs)</li>
+        <li>Audit & Revision History</li>
+        <li>Analytics</li>
       </ul>
     </div>
-    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Select</a>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Go Premium</a>
   </div>
 
-  <!-- BUSINESS plan -->
-  <div class="plan-card">
-    <div>
-      <div class="plan-title">Business</div>
-      <div class="price">$60<span style="font-size:14px;">/mo</span></div>
-      <p class="sub-info">20K Submissions. Ideal for organizations & agencies.</p>
-      <ul class="features-list">
-        <li>All Professional plus:</li>
-        <li>Custom Templates</li>
-        <li>Custom Domains</li>
-        <li>Rules Engine</li>
-        <li>Priority Support</li>
-      </ul>
-    </div>
-    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Select</a>
-  </div>
-
-  <!-- CUSTOM plan -->
+  <!-- CUSTOM PLAN -->
   <div class="plan-card">
     <div>
       <div class="plan-title">Custom</div>
-      <div class="price">Custom</div>
-      <p class="sub-info">For high volume campaigns, contact us.</p>
+      <div class="price">Contact Us</div>
+      <p class="sub-info">For large-scale or special requirements—unlimited usage and full service</p>
       <ul class="features-list">
-        <li>All Business plus:</li>
-        <li>SLA</li>
-        <li>Full Service Onboarding</li>
-        <li>Phone Support</li>
+        <li>Call 1300 940 202 (Australia)</li>
+        <li>Email <a style="color:#c7e0d4;" href="mailto:hi@spruces.co">hi@spruces.co</a></li>
+        <li>Tailored solutions to your needs</li>
+        <li>All Premium features + more</li>
       </ul>
     </div>
-    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Contact Sales</a>
+    <a class="plan-button" href="https://spruces.typeform.com/to/gTNPvZz4" target="_blank">Contact Us</a>
   </div>
 
 </div>
@@ -323,11 +308,10 @@
   <table class="comparison-table">
     <thead>
       <tr>
-        <th>Feature by Plans</th>
+        <th>Feature</th>
         <th class="plan-col">Free</th>
         <th class="plan-col">Personal</th>
         <th class="plan-col">Professional</th>
-        <th class="plan-col">Business</th>
         <th class="plan-col">Custom</th>
       </tr>
     </thead>
@@ -335,129 +319,79 @@
       <tr>
         <td class="price-col">Pricing</td>
         <td>$0 /mo</td>
-        <td>$10 /mo</td>
-        <td>$20 /mo</td>
-        <td>$60 /mo</td>
-        <td>Custom</td>
+        <td>$15 /mo</td>
+        <td>$25 /mo</td>
+        <td>Contact</td>
       </tr>
       <tr>
-        <td>Checkout Buttons</td>
-        <td>Select</td>
-        <td>Current</td>
-        <td>Select</td>
-        <td>Select</td>
-        <td>Contact Sales</td>
-      </tr>
-      <tr>
-        <td>Forms</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-      </tr>
-      <tr>
-        <td>Projects</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-      </tr>
-      <tr>
-        <td>Team Members</td>
-        <td>1</td>
-        <td>1</td>
-        <td>2</td>
-        <td>∞</td>
-        <td>∞</td>
+        <td>Checklists</td>
+        <td>1 Basic</td>
+        <td>Up to 5</td>
+        <td>Unlimited</td>
+        <td>Unlimited</td>
       </tr>
       <tr>
         <td>Monthly Submissions</td>
         <td>50</td>
         <td>200</td>
         <td>2,000</td>
-        <td>20,000</td>
-        <td>∞</td>
+        <td>Custom</td>
       </tr>
       <tr>
-        <td>Submission Archive</td>
-        <td>30 Days</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
+        <td>Monthly Images</td>
+        <td>No images</td>
+        <td>300</td>
+        <td>1,500</td>
+        <td>Custom</td>
       </tr>
       <tr>
-        <td>Linked Emails</td>
-        <td>2</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
-        <td>∞</td>
+        <td>Checklist Changes</td>
+        <td>None</td>
+        <td>1/month</td>
+        <td>2/month</td>
+        <td>Unlimited</td>
       </tr>
       <tr>
-        <td>File Uploads</td>
-        <td>-</td>
-        <td>1 GB</td>
-        <td>5 GB</td>
-        <td>10 GB</td>
-        <td>∞</td>
+        <td>Support</td>
+        <td>None</td>
+        <td>Email (24–72 hrs)</td>
+        <td>Priority (<24 hrs)</td>
+        <td>Priority + phone</td>
       </tr>
       <tr>
-        <td>Submission Export</td>
-        <td></td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>Audit & Revision History</td>
+        <td>No</td>
+        <td>No</td>
         <td>Yes</td>
         <td>Yes</td>
       </tr>
       <tr>
-        <td>Search Submissions</td>
-        <td></td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td>Basic Spam Filtering</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Yes</td>
+        <td>Analytics</td>
+        <td>No</td>
+        <td>No</td>
         <td>Yes</td>
         <td>Yes</td>
       </tr>
       <tr>
-        <td>Advanced Spam Control</td>
-        <td></td>
-        <td></td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td>Priority Support</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Yes</td>
+        <td>Phone Support</td>
+        <td>No</td>
+        <td>No</td>
+        <td>No</td>
         <td>Yes</td>
       </tr>
       <tr>
-        <td>SLA, Full Onboarding, Phone Support</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Yes</td>
+        <td>Contact Info</td>
+        <td>Stay Free</td>
+        <td>Upgrade</td>
+        <td>Go Premium</td>
+        <td>Call 1300 940 202</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<!-- Go Back Button -->
-<div class="back-container">
+<!-- Go Back Link -->
+<div style="text-align:center;">
   <a class="back-button" href="index.html">Go Back</a>
 </div>
 
